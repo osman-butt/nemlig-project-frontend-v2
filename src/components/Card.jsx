@@ -76,7 +76,7 @@ export default function Card({
               : data.product_underline}
           </p>
         </div>
-        {lowestPrice.price !== highestPrice.price ? (
+        {lowestPrice && highestPrice && lowestPrice.price !== highestPrice.price ? (
           <div className="flex flex-col justify-end h-full">
             <p className="text-[18px] line-through text-red-700">
               {highestPrice.price.toFixed(2)} kr.
